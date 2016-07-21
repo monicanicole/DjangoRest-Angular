@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  	<body style="background: url(ds.jpg) no-repeat; width: 100%; height: 150px; background-size: 100%;">
+</head>
+<body >
+<br>
+<br>
+	<div class='container'>
+	<div class='well'>
+		<p class='text-center'>
+			<strong>Carrera de Ingenieria en Sistemas</strong></br>
+			Quinto Ciclo Paralelo "A"</br>
+			2016
+		</p>
+	</div>
+<div class="container">
+
+<h1>Modificar Materia</h1>
+<form method="POST" action="">{% csrf_token %}
+{{formm.as_p}}
+
+<input type="submit" value="Guardar"></input>
+</form>
+</div>
+</body>
+</html>

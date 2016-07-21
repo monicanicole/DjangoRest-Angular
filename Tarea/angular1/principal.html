@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PrcaticaC</title>
+	<link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+  	<script src="angular/angular-route.js"></script>
+    <script src="angular/angular-resource.js"></script>
+  	<script src="js/principal1.js"></script>  
+  	<body style="background: url(ds.jpg) no-repeat; width: 100%; height: 150px; background-size: 100%;">
+</head>
+<body ng-app="app">
+<br>
+<br>
+	<div ng-controller="controlador">
+
+	<div class='container'>
+	<div class='well'>
+		<p class='text-center'>
+			<strong>Carrera de Ingenieria en Sistemas</strong></br>
+			Quinto Ciclo Paralelo "A"</br>
+			2016
+		</p>
+	</div>
+	<h3>ingrese la cedula</h3>
+	<input type="text" ng-model="sd"  placeholder="cedula"></input>
+	<br>
+	<br>
+	<input ng-disabled="!sd" type="submit" value="entrar" ng-click="logue()" ></input>
+	<br>
+
+	<h4>buscar</h4><input type="text" ng-model="buscar"  placeholder="buscar"></input>
+	<h3>Datos del Alumno</h3>
+	<table class=" table table-bordered">
+			
+			<tr>
+				<td  class="info">nombre</td>
+				<td  class="info">apellido</td>
+				<td  class="info">cedula</td>
+				
+			</tr>
+			<tr ng-repeat="li in lista | filter:buscar">
+					<td class="danger">{{li.nombres}}</td>
+					<td class="success">{{li.apellidos}}</td>
+					<td class="warning">{{li.cedula}}</td>
+			</tr>
+	</table>
+	</div>
+	</div>
+
+</body>
+</html>

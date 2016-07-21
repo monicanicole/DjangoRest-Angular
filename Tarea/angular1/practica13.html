@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prcatica13</title>
+	<link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+  	<script src="angular/angular-route.js"></script>
+    <script src="angular/angular-resource.js"></script>
+  	<script src="js/practica13.js"></script>  
+
+</head>
+<body ng-app="app">
+
+	<div ng-controller="controlador">
+	<div class='container'>
+	<div class='well'>
+		<p class='text-center'>
+			<strong>Carrera de Ingenieria en Sistemas</strong></br>
+			Quinto Ciclo Paralelo "A"</br>
+			2016
+		</p>
+	</div>
+	
+	<h3>Datos del Materias</h3>
+	<table class=" table table-bordered">
+			
+			<tr>
+			
+				<td  class="info">nombre</td>
+				<td  class="info">creditos</td>
+				<td  class="info">cupos</td>
+				<td  class="info">matricularse</td>
+				
+				
+			</tr>
+			<tr ng-repeat="li in lista">
+					
+				<td class="success">{{li.nombre}}</td>
+				<td class="danger">{{li.creditos}}</td>
+				<td class="warning">{{li.cupos}}</td>
+				<td class="warning"><input type="submit" value="matricularse"  ng-click="restar($index)"  ></td>
+				
+			</tr>
+	</table>
+	</div>
+	</div>
+</body>
+</html>
